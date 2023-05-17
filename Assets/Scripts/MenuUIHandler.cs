@@ -8,6 +8,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuUIHandler : MonoBehaviour
 {
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene("Game");
