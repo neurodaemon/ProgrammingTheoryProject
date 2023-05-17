@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class WarriorUnit : Unit
 {
+    // POLYMORPHISM
     protected override void Init()
     {
         m_MaxHP = 20;
@@ -14,8 +16,9 @@ public class WarriorUnit : Unit
         m_IsKnockedOut = false;
     }
 
+    // POLYMORPHISM
     public override void MainActionOnTarget(Unit target)
     {
-        AttackTarget(target);
+        AttackTarget(target); // ABSTRACTION
     }
 }

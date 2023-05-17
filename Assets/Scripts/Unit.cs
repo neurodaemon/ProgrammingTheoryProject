@@ -13,6 +13,7 @@ public abstract class Unit : MonoBehaviour
     protected bool m_IsKnockedOut;
     protected TextMeshProUGUI m_HPDisplay;
 
+    // ENCAPSULATION though unused
     public int HP { get { return m_HP; } }
     public int MaxHP { get { return m_MaxHP; } }
     public bool isKnockedOut { get { return m_IsKnockedOut; } }
@@ -20,7 +21,7 @@ public abstract class Unit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Init();
+        Init(); // ABSTRACTION
         InvokeRepeating("RegenerateHP", m_RegenSpeed, m_RegenSpeed);
         m_HPDisplay = gameObject.GetComponentInChildren<TextMeshProUGUI>();
     }
@@ -30,7 +31,7 @@ public abstract class Unit : MonoBehaviour
     {
         if (m_IsKnockedOut && m_HP == m_MaxHP)
         {
-            WakeUp();
+            WakeUp(); // ABSTRACTION
         }
 
         m_HPDisplay.text = $"HP: {m_HP}/{m_MaxHP}";

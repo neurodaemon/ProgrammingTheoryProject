@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class RangerUnit : Unit
 {
+    // POLYMORPHISM
     protected override void Init()
     {
         m_MaxHP = 15;
@@ -14,8 +16,9 @@ public class RangerUnit : Unit
         m_IsKnockedOut = false;
     }
 
+    // POLYMORPHISM
     public override void MainActionOnTarget(Unit target)
     {
-        AttackTarget(target);
+        AttackTarget(target); // ABSTRACTION
     }
 }

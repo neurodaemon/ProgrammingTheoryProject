@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class RogueUnit : Unit
 {
+    // POLYMORPHISM
     protected override void Init()
     {
         m_MaxHP = 12;
@@ -14,16 +16,18 @@ public class RogueUnit : Unit
         m_IsKnockedOut = false;
     }
 
+    // POLYMORPHISM
     public override void MainActionOnTarget(Unit target)
     {
         AttackTarget(target, 2);
     }
 
+    // POLYMORPHISM overloading
     private void AttackTarget(Unit target, int count)
     {
         for (int i = 0; i < count; i++)
         {
-            AttackTarget(target);
+            AttackTarget(target); // ABSTRACTION
         }
     }
 }

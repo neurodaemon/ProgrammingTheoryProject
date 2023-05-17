@@ -45,14 +45,14 @@ public class UserControl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            HandleSelection();
+            HandleSelection(); // ABSTRACTION
         }
         else if(m_Selected != null && Input.GetMouseButtonDown(1))
         {
-            HandleAction();
+            HandleAction(); // ABSTRACTION
         }
 
-        MarkerHandling();
+        MarkerHandling(); // ABSTRACTION
     }
 
     private void MarkerHandling()
